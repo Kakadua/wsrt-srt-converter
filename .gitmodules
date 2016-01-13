@@ -1,0 +1,3 @@
+[submodule "dropzone"]
+	path = dropzone
+	url = https://github.com/enyo/dropzone
