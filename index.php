@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div class="version">v1.1</div>
+		<div class="version">v1.2</div>
 		<h1>Popeens WSRT -> SRT Converter</h1>
 		<div class="text">This is a tool that converts wsrt files into ordinary srt files.<br/> You can read more about it in <a href="http://popeen.com/2016/01/09/converting-wsrt-to-srt/" target="_blank">this post on my blog</a>.</div>
 		<form action="gen.php" target="gen" id="dropzone" class="dropzone">
