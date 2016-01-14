@@ -17,6 +17,13 @@
 		<h1>Popeens WSRT -> SRT Converter</h1>
 		<div class="text">This is a tool that converts wsrt files into ordinary srt files.<br/> You can read more about it in <a href="http://popeen.com/2016/01/09/converting-wsrt-to-srt/" target="_blank">this post on my blog</a>.</div>
 		<form action="gen.php" target="gen" id="dropzone" class="dropzone">
+			<div class="encoding">
+				<label for="encoding">Encoding:</label>
+				<select id="encoding" name="encoding">
+					<option value="utf-8">UTF-8</option>
+					<option value="windows-1252">windows-1252</option>
+				</select>
+			</div>
 			<div class="dz-message" data-dz-message>
 				<span class="bold">Drop your wsrt files here (one at a time)</span>
 			</div>

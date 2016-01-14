@@ -19,6 +19,7 @@ h1{
 	text-decoration:none;
 }
 .dropzone{
+	position: relative;
 	width: 80%;
 	height: 50%;
 	border: 5px solid #3284a8;
@@ -53,4 +54,15 @@ h1{
 	width:0px;
 	height:0px;
 	display:none;
+}
+.encoding{
+	position: absolute;
+	top:-35px;
+	left:10px;
+	color: #777;
+}
+select{
+	background: #fafeff;
+	border-radius: 5px;
+	border: 1 px solid #777;
 }
