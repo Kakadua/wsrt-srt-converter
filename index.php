@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div class="version">v1.2</div>
+		<div class="version">v1.3</div>
 		<h1>Popeens WSRT -> SRT Converter</h1>
 		<div class="text">This is a tool that converts wsrt files into ordinary srt files.<br/> You can read more about it in <a href="http://popeen.com/2016/01/09/converting-wsrt-to-srt/" target="_blank">this post on my blog</a>.</div>
 		<form action="gen.php" target="gen" id="dropzone" class="dropzone">
@@ -21,7 +21,7 @@
 				<label for="encoding">Encoding:</label>
 				<select id="encoding" name="encoding">
 					<option value="utf-8">UTF-8</option>
-					<option value="windows-1252">windows-1252</option>
+					<option value="windows-1252" selected="selected">windows-1252</option>
 				</select>
 			</div>
 			<div class="dz-message" data-dz-message>
@@ -32,16 +32,18 @@
 		<script type="text/javascript">
 			Dropzone.options.dropzone = {
 				accept: function(file, done) {
-					if (file.name.split(".").slice(-1)[0]  == "wsrt") {
+					var file.name.split(".").slice(-1)[0];
+					if (extension == "wsrt" || extension == "srt") {
 						done();						
 					}
 					else { 
-					   done("Only wsrt files are supported");
+					   done("Only wsrt and srt files are supported");
 					}
 				},
 				init: function() {
 					this.on("complete", function(file) { 
-						if (file.name.split(".").slice(-1)[0]  == "wsrt") { 
+						var extension = file.name.split(".").slice(-1)[0];
+						if (extension == "wsrt" || extension == "srt") { 
 							document.getElementById('out').src = "out.php";  
 						}
 					});
