@@ -32,7 +32,7 @@
 		<script type="text/javascript">
 			Dropzone.options.dropzone = {
 				accept: function(file, done) {
-					var file.name.split(".").slice(-1)[0];
+					var extension = file.name.split(".").slice(-1)[0];
 					if (extension == "wsrt" || extension == "srt") {
 						done();						
 					}
